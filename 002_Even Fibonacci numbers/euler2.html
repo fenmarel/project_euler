@@ -1,0 +1,25 @@
+<script type="text/javascript" charset="utf-8">
+
+function euler2(max_val) {
+  var sum = 0;
+  var current = 1;
+  var next = 2;
+  var tmp;
+
+  while (current < max_val) {
+    if (current % 2 === 0) {
+      sum += current;
+    }
+
+    tmp = current;
+    current = next;
+    next = tmp + current;
+  }
+
+  return sum;
+}
+
+
+document.write(euler2(4000000));
+
+</script>
