@@ -1,0 +1,19 @@
+<script type="text/javascript" charset="utf-8">
+
+  function euler3(n) {
+    var factors = [];
+    var dup_num = n;
+
+    for (var i = 2; i < Math.sqrt(n); i++) {
+      if (dup_num % i === 0) {
+        factors.push(i);
+        dup_num = dup_num/i;
+      }
+    }
+
+    return factors;
+  }
+
+  document.write(euler3(600851475143));
+
+</script>
